@@ -155,6 +155,35 @@
       *,*::before,*::after { animation:none!important;transition:none!important; }
       .reveal { opacity:1!important;transform:none!important; }
     }
+
+
+    .keyboard-hint { margin:-8px 0 23px;color:var(--muted);font-size:.84rem; }
+    kbd { display:inline-block;padding:1px 7px;border:1px solid rgba(239,209,154,.35);border-radius:6px;background:#204439;color:var(--gold);font:700 .82em ui-monospace,monospace; }
+    .math-layout { display:grid;grid-template-columns:minmax(0,1.3fr) minmax(250px,.8fr);gap:20px; }
+    .math-panel,.math-aside { border:1px solid var(--border);border-radius:22px;padding:clamp(22px,3.2vw,35px);background:linear-gradient(150deg,#1f4b3e,#12322d);box-shadow:var(--shadow); }
+    .math-panel-head { display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:24px; }
+    .math-tag { color:var(--gold);font-size:.72rem;letter-spacing:.14em;font-weight:850; }
+    .math-score { color:var(--muted);font-size:.84rem; }
+    .math-mode-label,.math-answer-label { display:block;margin-bottom:8px;color:var(--muted);font-size:.87rem;font-weight:700; }
+    #mathMode { appearance:auto;width:100%;max-width:280px;background:#173b32;color:var(--text);border:1px solid #607d69;border-radius:10px;padding:10px 12px; }
+    .math-question { margin:28px 0 24px;font-size:clamp(2.5rem,6vw,4.25rem);font-weight:850;letter-spacing:-.05em;color:var(--gold);line-height:1.2; }
+    .math-answer-row { display:flex;gap:10px;flex-wrap:wrap; }
+    .math-answer-row input { width:165px;flex:1 1 125px;min-width:0;background:#0f3029;border:1px solid #64816f;border-radius:11px;padding:11px 14px;color:var(--text); }
+    .math-answer-row button,.math-next { background:var(--gold);border:1px solid var(--gold);border-radius:11px;padding:10px 17px;font-weight:800;color:#1b2b22; }
+    .math-answer-row button:hover,.math-next:hover { background:#ffdfa6; }
+    .math-answer-row button:disabled { opacity:.5;cursor:not-allowed; }
+    .math-feedback { min-height:28px;margin:17px 0 14px;color:var(--muted);font-size:.91rem; }
+    .math-feedback.correct { color:#ade8bd; }.math-feedback.incorrect { color:#f8c1a4; }
+    .math-next { background:transparent;color:var(--gold);border-color:rgba(239,209,154,.45); }
+    .math-next:hover { color:#173327; }
+    .math-aside { display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:linear-gradient(145deg,#174238,#102d2a); }
+    .math-aside-icon { font-size:3.4rem; }.math-aside h3 { margin:20px 0 4px;font-size:1.5rem;letter-spacing:-.04em; }
+    .math-aside p { color:var(--muted);line-height:1.8;font-size:.93rem; }
+    .math-mini-equations { display:flex;flex-wrap:wrap;gap:8px;margin-top:15px; }
+    .math-mini-equations span { padding:8px 12px;border:1px solid var(--border);border-radius:10px;background:#0e2c27;font-size:.81rem;color:var(--gold); }
+    @media(max-width:720px) { .math-layout { grid-template-columns:1fr; } }
+    @media(max-width:430px) { .math-answer-row button { width:100%; } }
+
   </style>
 </head>
 <body>
@@ -168,6 +197,7 @@
         <a href="#home" aria-current="location">Home</a>
         <a href="#books">Books</a>
         <a href="#coding">Coding</a>
+        <a href="#math">Math Lab</a>
         <a href="#about">About</a>
       </nav>
     </div>
@@ -181,11 +211,12 @@
         <p>Step into a cozy place for timeless stories and new ideas. Explore classic books and an original short story, discover beginner-friendly coding resources, and see where your curiosity takes you.</p>
         <div class="buttons">
           <a class="button" href="#books">Explore books <span aria-hidden="true">↗</span></a>
-          <a class="button secondary" href="#coding">Coding corner <span aria-hidden="true">→</span></a>
+          <a class="button secondary" href="#math">Try Math Lab <span aria-hidden="true">→</span></a>
         </div>
         <div class="stats" aria-label="Site highlights">
           <div class="stat">📚 <strong>7</strong> books & stories</div>
           <div class="stat">💻 <strong>3</strong> coding guides</div>
+          <div class="stat">🔢 Interactive math practice</div>
           <div class="stat">✨ Free to explore</div>
         </div>
       </div>
@@ -202,6 +233,7 @@
         <div><div class="eyebrow">The bookshelf</div><h2 id="books-title">Find your next read</h2><p class="section-description">Six free classics from Project Gutenberg, plus one original story you can read right here.</p></div>
         <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="bookSearch" type="search" placeholder="Search books…" aria-label="Search books" autocomplete="off"></label>
       </div>
+      <p class="keyboard-hint reveal">⌨️ Keyboard shortcut: <kbd>Alt</kbd> + <kbd>W</kbd> opens Willow Pier from anywhere on these pages.</p>
       <div class="cards" id="bookCards">
         <a class="card reveal" href="willow-pier.html"><span class="emoji" aria-hidden="true">🏮</span><h3>The Last Light at Willow Pier</h3><p>An original two-page mystery about a little lighthouse, a mysterious letter, and a forgotten promise. Read it right here on Page &amp; Pixel.</p><span class="card-link">Read on this site <span aria-hidden="true">→</span></span></a>
         <a class="card reveal" href="https://www.gutenberg.org/ebooks/11" target="_blank" rel="noopener noreferrer"><span class="emoji" aria-hidden="true">🐇</span><h3>Alice's Adventures in Wonderland</h3><p>Follow Alice down a rabbit hole into a world of wonderfully strange discoveries.</p><span class="card-link">Read the book <span aria-hidden="true">↗</span></span></a>
@@ -222,6 +254,38 @@
         <a class="card reveal" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website" target="_blank" rel="noopener noreferrer"><span class="emoji" aria-hidden="true">🌐</span><h3>Your first website</h3><p>Start building with HTML, CSS, and JavaScript using MDN's beginner guide.</p><span class="card-link">Start learning <span aria-hidden="true">↗</span></span></a>
         <a class="card reveal" href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer"><span class="emoji" aria-hidden="true">🧩</span><h3>HTML basics</h3><p>Learn how headings, links, images, and page layouts fit together.</p><span class="card-link">Explore HTML <span aria-hidden="true">↗</span></span></a>
         <a class="card reveal" href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site" target="_blank" rel="noopener noreferrer"><span class="emoji" aria-hidden="true">🚀</span><h3>Publish with GitHub Pages</h3><p>Learn how to put your own static website on the internet for free.</p><span class="card-link">Read the guide <span aria-hidden="true">↗</span></span></a>
+      </div>
+    </section>
+
+
+    <section class="content-section" id="math" aria-labelledby="math-title">
+      <div class="section-top reveal">
+        <div><div class="eyebrow">Think it through</div><h2 id="math-title">The Math Lab</h2><p class="section-description">A little mental-math practice, right here on Page &amp; Pixel. No account, no downloads.</p></div>
+      </div>
+      <div class="math-layout">
+        <div class="math-panel reveal">
+          <div class="math-panel-head"><span class="math-tag">✦ QUICK CHALLENGE</span><span class="math-score" id="mathScore" aria-live="polite">0 correct · 0 tried</span></div>
+          <form id="mathForm" autocomplete="off">
+            <label class="math-mode-label" for="mathMode">Practice</label>
+            <select id="mathMode" aria-label="Choose math operation">
+              <option value="mix">Mixed operations</option>
+              <option value="add">Addition</option>
+              <option value="subtract">Subtraction</option>
+              <option value="multiply">Multiplication</option>
+            </select>
+            <div class="math-question" id="mathQuestion" aria-live="polite">8 + 5 = ?</div>
+            <label class="math-answer-label" for="mathAnswer">Your answer</label>
+            <div class="math-answer-row"><input id="mathAnswer" type="number" step="1" inputmode="numeric" placeholder="Type a number" required><button type="submit" id="mathCheck">Check answer</button></div>
+            <p class="math-feedback" id="mathFeedback" aria-live="polite">Solve the problem and check your answer.</p>
+            <button type="button" class="math-next" id="mathNext">New question ↻</button>
+          </form>
+        </div>
+        <aside class="math-aside reveal">
+          <span class="math-aside-icon" aria-hidden="true">🧠</span>
+          <h3>Small problems. Big ideas.</h3>
+          <p>Choose an operation, solve each question, and track your progress. Each practice question is generated on your device.</p>
+          <div class="math-mini-equations" aria-hidden="true"><span>12 × 3 = 36</span><span>24 − 9 = 15</span><span>7 + 8 = 15</span></div>
+        </aside>
       </div>
     </section>
 
@@ -302,7 +366,7 @@
             else link.removeAttribute('aria-current');
           });
         }, { rootMargin: '-15% 0px -65% 0px', threshold:0 });
-        document.querySelectorAll('#home,#books,#coding,#about').forEach(el => sectionObserver.observe(el));
+        document.querySelectorAll('#home,#books,#coding,#math,#about').forEach(el => sectionObserver.observe(el));
       }
 
       let scrolling = false;
@@ -318,6 +382,66 @@
       window.addEventListener('resize', updateScroll);
       updateScroll();
       topButton.addEventListener('click', () => window.scrollTo({top:0,behavior:reduceMotion?'auto':'smooth'}));
+
+      // Alt + W opens our original short story from any page where this is installed.
+      document.addEventListener('keydown', event => {
+        if (!event.altKey || event.ctrlKey || event.metaKey || event.key.toLowerCase() !== 'w') return;
+        if (event.target.closest('input,textarea,select,[contenteditable="true"]')) return;
+        event.preventDefault();
+        window.location.assign('willow-pier.html#reader');
+      });
+
+      const mathForm = document.getElementById('mathForm');
+      const mathMode = document.getElementById('mathMode');
+      const mathQuestion = document.getElementById('mathQuestion');
+      const mathAnswer = document.getElementById('mathAnswer');
+      const mathFeedback = document.getElementById('mathFeedback');
+      const mathCheck = document.getElementById('mathCheck');
+      const mathNext = document.getElementById('mathNext');
+      const mathScore = document.getElementById('mathScore');
+      let mathResult = 0, mathAnswered = false, mathCorrect = 0, mathTried = 0;
+      const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+      function newMathQuestion() {
+        const op = mathMode.value === 'mix' ? ['add','subtract','multiply'][randomInt(0,2)] : mathMode.value;
+        let a = randomInt(2,25), b = randomInt(2,25), sign = '+';
+        if (op === 'add') mathResult = a + b;
+        if (op === 'subtract') {
+          if (a < b) [a,b] = [b,a];
+          mathResult = a - b;
+          sign = '−';
+        }
+        if (op === 'multiply') {
+          a = randomInt(2,12); b = randomInt(2,12);
+          mathResult = a * b;
+          sign = '×';
+        }
+        mathQuestion.textContent = `${a} ${sign} ${b} = ?`;
+        mathAnswer.value = '';
+        mathAnswered = false;
+        mathCheck.disabled = false;
+        mathFeedback.textContent = 'Solve the problem and check your answer.';
+        mathFeedback.className = 'math-feedback';
+      }
+      mathForm.addEventListener('submit', event => {
+        event.preventDefault();
+        if (mathAnswered || mathAnswer.value === '') return;
+        mathAnswered = true;
+        mathTried++;
+        if (Number(mathAnswer.value) === mathResult) {
+          mathCorrect++;
+          mathFeedback.textContent = '✓ Correct! Nice work.';
+          mathFeedback.className = 'math-feedback correct';
+        } else {
+          mathFeedback.textContent = `Not quite — the answer is ${mathResult}. Try a new question!`;
+          mathFeedback.className = 'math-feedback incorrect';
+        }
+        mathCheck.disabled = true;
+        mathScore.textContent = `${mathCorrect} correct · ${mathTried} tried`;
+      });
+      mathNext.addEventListener('click', () => { newMathQuestion(); mathAnswer.focus(); });
+      mathMode.addEventListener('change', newMathQuestion);
+      newMathQuestion();
+
     })();
   </script>
 </body>

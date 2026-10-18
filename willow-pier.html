@@ -1,164 +1,106 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b2421">
-  <meta name="description" content="Read The Last Light at Willow Pier, an original five-page short story from Page & Pixel.">
-  <title>The Last Light at Willow Pier | Page & Pixel</title>
-  <style>
-    :root{color-scheme:dark;--bg:#081a19;--surface:#14362e;--paper:#efe6cf;--ink:#273830;--muted:#c0d4c8;--gold:#efd19a;--line:rgba(207,234,215,.17)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;background:radial-gradient(circle at 15% 5%,#1b463b,#081a19 58%);color:#faf5e9;font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
-    a{color:inherit}.skip{position:absolute;left:12px;top:-80px;padding:8px 12px;background:var(--gold);color:#24382e;z-index:5}.skip:focus{top:10px}
-    .top{position:sticky;top:0;background:#09201dcf;backdrop-filter:blur(14px);border-bottom:1px solid var(--line);z-index:4}
-    .top-inner{max-width:980px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 22px}
-    .brand{text-decoration:none;font-size:1.1rem;font-weight:850;letter-spacing:-.04em}.brand b{color:var(--gold)}
-    .back{font-weight:680;color:var(--gold);text-decoration:none;border:1px solid #efd19a50;border-radius:10px;padding:8px 12px}.back:hover{background:#efd19a16}
-    main{width:min(840px,calc(100% - 32px));margin:40px auto 65px}.intro{text-align:center;margin-bottom:28px}.label{color:var(--gold);font-size:.76rem;letter-spacing:.17em;font-weight:800;text-transform:uppercase}
-    h1{font:700 clamp(2rem,5vw,3.6rem)/1.12 Georgia,'Times New Roman',serif;letter-spacing:-.035em;margin:12px auto 13px;max-width:620px}.subtitle{color:var(--muted);margin:0 auto;max-width:560px}
-    #reader{scroll-margin-top:96px}
-    .reader{border:1px solid #efd19a55;border-radius:17px;overflow:hidden;box-shadow:0 20px 70px #0006;background:var(--paper);color:var(--ink)}
-    .page{padding:clamp(24px,5vw,66px);animation:appear .25s ease}.page[hidden]{display:none}
-    .page-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #27463a33;padding-bottom:18px;margin-bottom:29px;color:#637266;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800}
-    .chapter-title{color:#283d32;font:700 clamp(1.7rem,4vw,2.3rem)/1.2 Georgia,serif;margin:0 0 24px}
-    .story p{font:clamp(1.06rem,2vw,1.18rem)/1.95 Georgia,'Times New Roman',serif;margin:0 0 1.1em}.story p:first-of-type::first-letter{float:left;font-size:3.8rem;line-height:.83;padding:9px 8px 0 0;color:#396352}
-    .ornament{text-align:center;color:#6f8977;font-size:1.4rem;padding-top:18px}
-    .controls{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:17px 20px;background:#e5d9bc;border-top:1px solid #c6bda7;color:#38463b}
-    button{cursor:pointer;border:1px solid #50715d;border-radius:9px;background:#2a5342;color:#fff8ea;padding:10px 16px;font:700 .9rem system-ui,-apple-system,Segoe UI,sans-serif;min-width:120px}
-    button:hover:not(:disabled){background:#346a54}button:disabled{opacity:.35;cursor:not-allowed}.page-count{font-weight:800;font-size:.83rem;white-space:nowrap}
-    .related{margin-top:40px;padding:20px 22px;border:1px solid #b6c8b6;border-radius:12px;background:#e5e7d3}
-    .related h3{font:700 1.35rem Georgia,serif;margin:0 0 8px;color:#284b3a}
-    .related p{font: .94rem/1.65 system-ui,sans-serif;color:#3f5348;margin:0 0 12px}
-    .related ul{margin:0;padding-left:22px}.related li{margin:8px 0}.related a{color:#285c4b;text-underline-offset:3px;font-weight:650}
-    .related a:hover{color:#122e25}
-    .footer-note{text-align:center;color:var(--muted);font-size:.84rem;margin-top:26px}.footer-note a{color:var(--gold)}
-    :focus-visible{outline:3px solid var(--gold);outline-offset:4px}@keyframes appear{from{opacity:.6;transform:translateY(6px)}to{opacity:1;transform:none}}
-    @media(max-width:500px){.top-inner{padding:13px 16px}.back{font-size:.8rem}.controls{padding:13px 10px}button{min-width:0;padding:10px}.page-count{font-size:.75rem}}
-    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important}}
-
-    kbd{display:inline-block;padding:1px 6px;border:1px solid #efd19a66;border-radius:5px;color:var(--gold);font:700 .85em ui-monospace,monospace;background:#23483b}
-  </style>
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#0b2421" name="theme-color"/>
+<meta content="Read The Last Light at Willow Pier, an original five-page short story from Page &amp; Pixel." name="description"/>
+<title>The Last Light at Willow Pier | Page &amp; Pixel</title>
+<link href="assets/css/reader.css" rel="stylesheet"/>
+<link href="assets/img/bookmark.svg" rel="icon" type="image/svg+xml"/></head>
 <body>
 <a class="skip" href="#reader">Skip to story</a>
-<header class="top"><div class="top-inner"><a class="brand" href="index.html">📖 Page <b>&</b> Pixel</a><a class="back" href="index.html#books">← Back to books</a></div></header>
+<header class="top"><div class="top-inner"><a class="brand" href="index.html">📖 Page <b>&amp;</b> Pixel</a><a class="back" href="index.html#books">← Back to books</a></div></header>
 <main>
-  <div class="intro"><div class="label">An original short story · 5 pages</div><h1>The Last Light at Willow Pier</h1><p class="subtitle">Some promises are kept long after everyone has forgotten them.</p></div>
-  <div class="reader" id="reader">
-    <article class="page story" data-page="1" aria-label="Page 1 of 5">
-      <div class="page-head"><span>Page & Pixel · Fiction</span><span>01 / 05</span></div>
-      <h2 class="chapter-title">The Lantern</h2>
-      <p>Every evening at seven, the old lantern at the end of Willow Pier lit itself.</p>
-      <p>No one had tended the lantern for thirty years. The lighthouse keeper had moved away, the fishing boats had stopped coming, and the wooden boards creaked under the weight of nobody at all. Yet every night, as the clock above the bakery struck seven, a golden light blinked awake over the water.</p>
-      <p>Most people in the village called it a trick of the sunset. Mara, who had never been very good at believing what everyone else believed, decided to investigate.</p>
-      <p>She arrived at the pier with a flashlight, a notebook, and a sandwich wrapped in paper. The sea was perfectly still. At the far end, the lantern's glass was fogged, but the flame inside burned steady and bright.</p>
-      <p>There was no match, no oil, and no wire leading to it. Beneath the lantern sat a small tin box, painted blue like a summer sky. Across the lid, in tiny silver letters, someone had written: <em>For the one who stays until the light goes out.</em></p>
-      <p>Mara opened the box. Inside lay a letter, a brass key, and a photograph of two children on the very same pier. One of them held a paper boat. The other held a lantern.</p>
-      <p>The letter was short: <em>When the river forgets its way to the sea, follow the light home.</em></p>
-      <p>Mara looked up. Across the black water, where no island had ever stood, a second light began to glow.</p>
-      <div class="ornament" aria-hidden="true">✦</div>
-    </article>
-    <article class="page story" data-page="2" aria-label="Page 2 of 5" hidden>
-      <div class="page-head"><span>Page & Pixel · Fiction</span><span>02 / 05</span></div>
-      <h2 class="chapter-title">The Promise</h2>
-      <p>It wasn't an island. It was a boat, so small and pale that it looked like a folded piece of moonlight.</p>
-      <p>The boat drifted toward the pier without a splash. On its bow hung a lock shaped like a star. Mara fitted the brass key into it, and the little door of a wooden chest swung open.</p>
-      <p>Inside was a second photograph. The two children were older now, standing beneath a banner that read <em>Willow Pier, Opening Day.</em> On the back, someone had written: <em>We promised to keep a light burning until the last boat found its way back.</em></p>
-      <p>Mara knew the girl in the picture. It was her grandmother, who had spent her life telling stories about the sea, and who always left a lamp glowing in the kitchen window.</p>
-      <p>At the bottom of the chest lay a folded map, drawn in blue ink. A thin line wound from the village through the marshes and into the sea. Mara recognized the path: it was the old river, the one that had dried up before she was born.</p>
-      <p>She raised her flashlight and traced the line across the dark shoreline. Beyond the reeds, she heard something she had never heard there before—the quiet rush of moving water. A stream had returned after the evening rain, and it was filling the riverbed one little bend at a time.</p>
-      <p>As the first trickle reached the sea, the lantern at Willow Pier flickered. Then it went dark.</p>
-      <p>Mara waited, expecting the night to feel empty. Instead, across the village, one kitchen window shone gold. Then another. Then a third. The people of Willow had noticed the water and come out with lamps of their own.</p>
-      <p>She put the photographs carefully into her notebook and started home beneath a hundred small lights. Tomorrow, she would ask her grandmother about the promise. But when she reached the end of the pier, she found a fresh envelope tucked beneath her bicycle bell.</p>
-      <p>On the front, in the same silver handwriting as the tin box, were five words: <em>There is one light left.</em></p>
-      <div class="ornament" aria-hidden="true">✦</div>
-    </article>
-    <article class="page story" data-page="3" aria-label="Page 3 of 5" hidden>
-      <div class="page-head"><span>Page &amp; Pixel · Fiction</span><span>03 / 05</span></div>
-      <h2 class="chapter-title">The Map in the Kitchen</h2>
-      <p>At breakfast, Mara's grandmother was already awake. She sat by the kitchen window, polishing a small brass compass that Mara had never seen before. A lamp burned beside her teacup, though sunlight filled the room.</p>
-      <p>Mara spread the two photographs, the letter, and the new envelope across the table. Her grandmother read the five silver words and closed her eyes. For a moment she looked less like someone remembering a story and more like someone listening for a familiar voice.</p>
-      <p>“I was twelve when my brother Elias and I made that promise,” she said. “The river was wide then, and boats came to Willow from every corner of the coast. We thought a lantern could solve anything.”</p>
-      <p>“Who wrote this?” Mara asked, touching the envelope.</p>
-      <p>“Elias always wrote in silver ink. He said ordinary ink was too easy for the sea to wash away.”</p>
-      <p>Her grandmother reached beneath the table and pulled out a wooden drawer. Inside were receipts from the old ferry, a bundle of postcards, and a map much larger than the one Mara had found in the chest. The paper smelled faintly of salt and oranges.</p>
-      <p>Three small circles had been drawn around the village: the lantern at Willow Pier, the bakery clock, and a narrow building on the northern headland marked <em>Signal House</em>. A red line connected them, ending at a lighthouse that no longer appeared on any modern map.</p>
-      <p>“The pier lantern wasn't meant to stay lit forever,” her grandmother explained. “It was the first light in a chain. Each one told the next where to look. When the river vanished, we stopped checking the chain.”</p>
-      <p>Mara unfolded the second letter. There was a tiny drawing on the back: a crescent moon above three windows. Beside it, one instruction: <em>Before the tide turns.</em></p>
-      <p>Outside, the morning bell rang. Her grandmother looked toward the headland. “Then we'd better find Signal House,” she said.</p>
-      <div class="ornament" aria-hidden="true">✦</div>
-    </article>
-    <article class="page story" data-page="4" aria-label="Page 4 of 5" hidden>
-      <div class="page-head"><span>Page &amp; Pixel · Fiction</span><span>04 / 05</span></div>
-      <h2 class="chapter-title">Signal House</h2>
-      <p>The path to Signal House had almost disappeared beneath brambles. Mara and her grandmother followed the red line on the old map through wet grass and wind-bent pines until the sea opened beneath them like a sheet of hammered silver.</p>
-      <p>The building was hardly a house at all. It had three narrow windows, a crooked chimney, and a door painted the same bright blue as the tin box. Above the handle hung a crescent of rusted metal.</p>
-      <p>Mara tried the brass key. It didn't fit. Her grandmother laughed softly, then pushed the door with one finger. The hinges complained, but the door swung inward.</p>
-      <p>Dust lay over everything except a round table in the center of the room. Someone had recently wiped it clean. On the table stood three unlit glass lamps and a little notebook wrapped in string.</p>
-      <p>The notebook belonged to Elias. Its pages recorded tides, storms, and boats that had made it safely through the estuary. Some entries were practical—<em>north light needs new glass</em>—and others sounded like wishes: <em>One day there will be enough windows shining that no traveler can mistake the shore.</em></p>
-      <p>Near the back, a sketch showed how the signal worked. One lamp illuminated the next across the bay. The final light, high on the headland, guided boats toward the river mouth.</p>
-      <p>“But there haven't been boats here for years,” Mara said.</p>
-      <p>Her grandmother was examining the final page. “Not every lost traveler is on a boat,” she answered.</p>
-      <p>A line beneath the drawing had been underlined twice: <em>If the last light goes out, someone must choose to light it again.</em></p>
-      <p>As Mara read those words, the room darkened. Clouds were gathering over the water, and the tide was rising against the rocks. Far below, a tiny fishing boat appeared at the edge of the bay, turning uncertainly in the mist.</p>
-      <p>The three lamps stood silent on the table. Mara looked at the windows, then at the boat. There was no time to wonder whether old promises still mattered.</p>
-      <div class="ornament" aria-hidden="true">✦</div>
-    </article>
-    <article class="page story" data-page="5" aria-label="Page 5 of 5" hidden>
-      <div class="page-head"><span>Page &amp; Pixel · Fiction</span><span>05 / 05</span></div>
-      <h2 class="chapter-title">A Hundred Small Lights</h2>
-      <p>Mara carried the lamps to the windows while her grandmother searched the cupboards for matches. They found only a damp box and a stub of candle. Mara struck a match once; it snapped. She tried another, shielding it from the draft, and a tiny flame took hold.</p>
-      <p>They lit the first lamp and then the second. When Mara reached the third window, she saw a light flash from the bakery in the village below. Someone had noticed.</p>
-      <p>Across Willow, windows glimmered one by one. People set lanterns on porches and in upper rooms. The lights didn't form a perfect line, but they made a path of warmth along the shore. Through the fog, the fishing boat turned toward the river's newly opened mouth.</p>
-      <p>“Elias would have liked that,” Mara's grandmother said.</p>
-      <p>“Did he ever come back?” Mara asked.</p>
-      <p>“He did,” her grandmother replied. “Many times. And when he couldn't travel anymore, he sent letters. The light was our way of saying we were still here, even when we couldn't see each other.”</p>
-      <p>They watched until the boat reached calm water. The wind eased. Above them, a pale strip of moon appeared between the clouds, and for the first time Mara understood why the old maps had drawn a crescent over Signal House.</p>
-      <p>That evening, she returned to Willow Pier. The old lantern stayed dark. Mara didn't mind. She placed a new little lamp beside it and wrote a note for whoever found it next: <em>If you ever feel lost, look for the lights people leave for one another.</em></p>
-      <p>And when the bakery clock struck seven, Mara watched the village shine—not because of a mystery nobody understood, but because people had chosen to remember.</p>
-      <div class="ornament" aria-hidden="true">✦ &nbsp; The End &nbsp; ✦</div>
-      <aside class="related" aria-label="Related reading">
-        <h3>Further reading</h3>
-        <p>This story is fictional. These links are optional background reading about real-world ideas that appear in it, not sources for the invented events.</p>
-        <ul>
-          <li><a href="https://en.wikipedia.org/wiki/Lighthouse" target="_blank" rel="noopener noreferrer">Lighthouse — Wikipedia ↗</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Estuary" target="_blank" rel="noopener noreferrer">Estuary — Wikipedia ↗</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Maritime_signal_flag" target="_blank" rel="noopener noreferrer">Maritime signal flags — Wikipedia ↗</a></li>
-        </ul>
-      </aside>
-    </article>
-    <nav class="controls" aria-label="Story pages"><button type="button" id="prev" disabled>← Previous</button><span class="page-count" id="count" aria-live="polite">Page 1 of 5</span><button type="button" id="next">Next →</button></nav>
-  </div>
-  <div class="footer-note">An original story written for Page &amp; Pixel. <a href="index.html#books">Browse more books →</a><br>Keyboard shortcut: <kbd>Alt</kbd> + <kbd>W</kbd> returns you to the story.</div>
+<div class="intro"><div class="label">An original short story · 5 pages</div><h1>The Last Light at Willow Pier</h1><p class="subtitle">Some promises are kept long after everyone has forgotten them.</p></div>
+<div class="reader" id="reader">
+<article aria-label="Page 1 of 5" class="page story" data-page="1">
+<div class="page-head"><span>Page &amp; Pixel · Fiction</span><span>01 / 05</span></div>
+<h2 class="chapter-title">The Lantern</h2>
+<p>Every evening at seven, the old lantern at the end of Willow Pier lit itself.</p>
+<p>No one had tended the lantern for thirty years. The lighthouse keeper had moved away, the fishing boats had stopped coming, and the wooden boards creaked under the weight of nobody at all. Yet every night, as the clock above the bakery struck seven, a golden light blinked awake over the water.</p>
+<p>Most people in the village called it a trick of the sunset. Mara, who had never been very good at believing what everyone else believed, decided to investigate.</p>
+<p>She arrived at the pier with a flashlight, a notebook, and a sandwich wrapped in paper. The sea was perfectly still. At the far end, the lantern's glass was fogged, but the flame inside burned steady and bright.</p>
+<p>There was no match, no oil, and no wire leading to it. Beneath the lantern sat a small tin box, painted blue like a summer sky. Across the lid, in tiny silver letters, someone had written: <em>For the one who stays until the light goes out.</em></p>
+<p>Mara opened the box. Inside lay a letter, a brass key, and a photograph of two children on the very same pier. One of them held a paper boat. The other held a lantern.</p>
+<p>The letter was short: <em>When the river forgets its way to the sea, follow the light home.</em></p>
+<p>Mara looked up. Across the black water, where no island had ever stood, a second light began to glow.</p>
+<div aria-hidden="true" class="ornament">✦</div>
+</article>
+<article aria-label="Page 2 of 5" class="page story" data-page="2" hidden="">
+<div class="page-head"><span>Page &amp; Pixel · Fiction</span><span>02 / 05</span></div>
+<h2 class="chapter-title">The Promise</h2>
+<p>It wasn't an island. It was a boat, so small and pale that it looked like a folded piece of moonlight.</p>
+<p>The boat drifted toward the pier without a splash. On its bow hung a lock shaped like a star. Mara fitted the brass key into it, and the little door of a wooden chest swung open.</p>
+<p>Inside was a second photograph. The two children were older now, standing beneath a banner that read <em>Willow Pier, Opening Day.</em> On the back, someone had written: <em>We promised to keep a light burning until the last boat found its way back.</em></p>
+<p>Mara knew the girl in the picture. It was her grandmother, who had spent her life telling stories about the sea, and who always left a lamp glowing in the kitchen window.</p>
+<p>At the bottom of the chest lay a folded map, drawn in blue ink. A thin line wound from the village through the marshes and into the sea. Mara recognized the path: it was the old river, the one that had dried up before she was born.</p>
+<p>She raised her flashlight and traced the line across the dark shoreline. Beyond the reeds, she heard something she had never heard there before—the quiet rush of moving water. A stream had returned after the evening rain, and it was filling the riverbed one little bend at a time.</p>
+<p>As the first trickle reached the sea, the lantern at Willow Pier flickered. Then it went dark.</p>
+<p>Mara waited, expecting the night to feel empty. Instead, across the village, one kitchen window shone gold. Then another. Then a third. The people of Willow had noticed the water and come out with lamps of their own.</p>
+<p>She put the photographs carefully into her notebook and started home beneath a hundred small lights. Tomorrow, she would ask her grandmother about the promise. But when she reached the end of the pier, she found a fresh envelope tucked beneath her bicycle bell.</p>
+<p>On the front, in the same silver handwriting as the tin box, were five words: <em>There is one light left.</em></p>
+<div aria-hidden="true" class="ornament">✦</div>
+</article>
+<article aria-label="Page 3 of 5" class="page story" data-page="3" hidden="">
+<div class="page-head"><span>Page &amp; Pixel · Fiction</span><span>03 / 05</span></div>
+<h2 class="chapter-title">The Map in the Kitchen</h2>
+<p>At breakfast, Mara's grandmother was already awake. She sat by the kitchen window, polishing a small brass compass that Mara had never seen before. A lamp burned beside her teacup, though sunlight filled the room.</p>
+<p>Mara spread the two photographs, the letter, and the new envelope across the table. Her grandmother read the five silver words and closed her eyes. For a moment she looked less like someone remembering a story and more like someone listening for a familiar voice.</p>
+<p>“I was twelve when my brother Elias and I made that promise,” she said. “The river was wide then, and boats came to Willow from every corner of the coast. We thought a lantern could solve anything.”</p>
+<p>“Who wrote this?” Mara asked, touching the envelope.</p>
+<p>“Elias always wrote in silver ink. He said ordinary ink was too easy for the sea to wash away.”</p>
+<p>Her grandmother reached beneath the table and pulled out a wooden drawer. Inside were receipts from the old ferry, a bundle of postcards, and a map much larger than the one Mara had found in the chest. The paper smelled faintly of salt and oranges.</p>
+<p>Three small circles had been drawn around the village: the lantern at Willow Pier, the bakery clock, and a narrow building on the northern headland marked <em>Signal House</em>. A red line connected them, ending at a lighthouse that no longer appeared on any modern map.</p>
+<p>“The pier lantern wasn't meant to stay lit forever,” her grandmother explained. “It was the first light in a chain. Each one told the next where to look. When the river vanished, we stopped checking the chain.”</p>
+<p>Mara unfolded the second letter. There was a tiny drawing on the back: a crescent moon above three windows. Beside it, one instruction: <em>Before the tide turns.</em></p>
+<p>Outside, the morning bell rang. Her grandmother looked toward the headland. “Then we'd better find Signal House,” she said.</p>
+<div aria-hidden="true" class="ornament">✦</div>
+</article>
+<article aria-label="Page 4 of 5" class="page story" data-page="4" hidden="">
+<div class="page-head"><span>Page &amp; Pixel · Fiction</span><span>04 / 05</span></div>
+<h2 class="chapter-title">Signal House</h2>
+<p>The path to Signal House had almost disappeared beneath brambles. Mara and her grandmother followed the red line on the old map through wet grass and wind-bent pines until the sea opened beneath them like a sheet of hammered silver.</p>
+<p>The building was hardly a house at all. It had three narrow windows, a crooked chimney, and a door painted the same bright blue as the tin box. Above the handle hung a crescent of rusted metal.</p>
+<p>Mara tried the brass key. It didn't fit. Her grandmother laughed softly, then pushed the door with one finger. The hinges complained, but the door swung inward.</p>
+<p>Dust lay over everything except a round table in the center of the room. Someone had recently wiped it clean. On the table stood three unlit glass lamps and a little notebook wrapped in string.</p>
+<p>The notebook belonged to Elias. Its pages recorded tides, storms, and boats that had made it safely through the estuary. Some entries were practical—<em>north light needs new glass</em>—and others sounded like wishes: <em>One day there will be enough windows shining that no traveler can mistake the shore.</em></p>
+<p>Near the back, a sketch showed how the signal worked. One lamp illuminated the next across the bay. The final light, high on the headland, guided boats toward the river mouth.</p>
+<p>“But there haven't been boats here for years,” Mara said.</p>
+<p>Her grandmother was examining the final page. “Not every lost traveler is on a boat,” she answered.</p>
+<p>A line beneath the drawing had been underlined twice: <em>If the last light goes out, someone must choose to light it again.</em></p>
+<p>As Mara read those words, the room darkened. Clouds were gathering over the water, and the tide was rising against the rocks. Far below, a tiny fishing boat appeared at the edge of the bay, turning uncertainly in the mist.</p>
+<p>The three lamps stood silent on the table. Mara looked at the windows, then at the boat. There was no time to wonder whether old promises still mattered.</p>
+<div aria-hidden="true" class="ornament">✦</div>
+</article>
+<article aria-label="Page 5 of 5" class="page story" data-page="5" hidden="">
+<div class="page-head"><span>Page &amp; Pixel · Fiction</span><span>05 / 05</span></div>
+<h2 class="chapter-title">A Hundred Small Lights</h2>
+<p>Mara carried the lamps to the windows while her grandmother searched the cupboards for matches. They found only a damp box and a stub of candle. Mara struck a match once; it snapped. She tried another, shielding it from the draft, and a tiny flame took hold.</p>
+<p>They lit the first lamp and then the second. When Mara reached the third window, she saw a light flash from the bakery in the village below. Someone had noticed.</p>
+<p>Across Willow, windows glimmered one by one. People set lanterns on porches and in upper rooms. The lights didn't form a perfect line, but they made a path of warmth along the shore. Through the fog, the fishing boat turned toward the river's newly opened mouth.</p>
+<p>“Elias would have liked that,” Mara's grandmother said.</p>
+<p>“Did he ever come back?” Mara asked.</p>
+<p>“He did,” her grandmother replied. “Many times. And when he couldn't travel anymore, he sent letters. The light was our way of saying we were still here, even when we couldn't see each other.”</p>
+<p>They watched until the boat reached calm water. The wind eased. Above them, a pale strip of moon appeared between the clouds, and for the first time Mara understood why the old maps had drawn a crescent over Signal House.</p>
+<p>That evening, she returned to Willow Pier. The old lantern stayed dark. Mara didn't mind. She placed a new little lamp beside it and wrote a note for whoever found it next: <em>If you ever feel lost, look for the lights people leave for one another.</em></p>
+<p>And when the bakery clock struck seven, Mara watched the village shine—not because of a mystery nobody understood, but because people had chosen to remember.</p>
+<div aria-hidden="true" class="ornament">✦   The End   ✦</div>
+<aside aria-label="Related reading" class="related">
+<h3>Further reading</h3>
+<p>This story is fictional. These links open original reference pages hosted here on Page &amp; Pixel, with links to the external source articles. They are background reading, not evidence for fictional events.</p>
+<ul>
+<li><a href="references/lighthouses.html">Lighthouses — Read on this site →</a></li>
+<li><a href="references/estuaries.html">Estuaries — Read on this site →</a></li>
+<li><a href="references/signal-flags.html">Maritime signal flags — Read on this site →</a></li>
+</ul>
+</aside>
+</article>
+<nav aria-label="Story pages" class="controls"><button disabled="" id="prev" type="button">← Previous</button><span aria-live="polite" class="page-count" id="count">Page 1 of 5</span><button id="next" type="button">Next →</button></nav>
+</div>
+<div class="footer-note">An original story written for Page &amp; Pixel. <a href="index.html#books">Browse more books →</a> · <a href="references/index.html">Reference library →</a><br/>Keyboard shortcut: <kbd>Alt</kbd> + <kbd>W</kbd> returns you to the story.</div>
 </main>
-<script>
-(() => {
-  const pages = [...document.querySelectorAll('.page')];
-  const previous = document.getElementById('prev');
-  const next = document.getElementById('next');
-  const count = document.getElementById('count');
-  let current = 0;
-  function showPage(index) {
-    current = Math.max(0, Math.min(index, pages.length - 1));
-    pages.forEach((page,i) => { page.hidden = i !== current; });
-    previous.disabled = current === 0;
-    next.disabled = current === pages.length - 1;
-    count.textContent = `Page ${current + 1} of ${pages.length}`;
-    document.getElementById('reader').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
-  }
-  previous.addEventListener('click', () => showPage(current - 1));
-  next.addEventListener('click', () => showPage(current + 1));
-  document.addEventListener('keydown', e => {
-    if (e.altKey && !e.ctrlKey && !e.metaKey && e.key.toLowerCase() === 'w') {
-      e.preventDefault();
-      document.getElementById('reader').scrollIntoView({behavior:'smooth',block:'start'});
-      return;
-    }
-    if (['INPUT','TEXTAREA','BUTTON'].includes(document.activeElement.tagName)) return;
-    if (e.key === 'ArrowRight' && current < pages.length - 1) showPage(current + 1);
-    if (e.key === 'ArrowLeft' && current > 0) showPage(current - 1);
-  });
-})();
-</script>
+<script defer src="assets/js/reader.js"></script>
 </body>
 </html>

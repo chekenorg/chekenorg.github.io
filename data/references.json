@@ -1,0 +1,35 @@
+{
+  "about": "Short original explainers based on the linked reference topics; the fictional story is not historical evidence.",
+  "references": [
+    {
+      "slug": "lighthouses",
+      "label": "Lighthouses",
+      "icon": "🏮",
+      "subtitle": "The guiding lights of coastlines",
+      "url": "https://en.wikipedia.org/wiki/Lighthouse",
+      "source": "Lighthouse — Wikipedia",
+      "quick": "Lighthouses are structures that display navigational lights to help vessels recognize shorelines, hazards, and approaches to ports.",
+      "story": "Mara finds an old lantern on Willow Pier. Real lighthouses and beacons also use light to help travelers orient themselves, although the magical lantern belongs only to the story."
+    },
+    {
+      "slug": "estuaries",
+      "label": "Estuaries",
+      "icon": "🌊",
+      "subtitle": "Where a river meets the sea",
+      "url": "https://en.wikipedia.org/wiki/Estuary",
+      "source": "Estuary — Wikipedia",
+      "quick": "An estuary is a coastal area where freshwater from rivers or streams meets seawater, often creating a mixture called brackish water.",
+      "story": "The river in Willow Pier returns to the coast. Its meeting point with the sea resembles an estuary, a real landscape feature; the invented river and village are fictional."
+    },
+    {
+      "slug": "signal-flags",
+      "label": "Maritime signal flags",
+      "icon": "🚩",
+      "subtitle": "Messages between ships",
+      "url": "https://en.wikipedia.org/wiki/Maritime_signal_flag",
+      "source": "International maritime signal flags — Wikipedia",
+      "quick": "Maritime signal flags are standardized, colorful flags that ships can use to communicate letters, coded messages, and specific meanings.",
+      "story": "The story uses a chain of lanterns to communicate along the shore. Real maritime signal flags are another way to pass visible messages, although Willow Pier’s lantern system is invented."
+    }
+  ]
+}
